@@ -91,7 +91,11 @@ require("lazy").setup({
 
   {'akinsho/toggleterm.nvim', version = "*", config = true},
 
-    "nvim-tree/nvim-tree.lua",
+  "nvim-tree/nvim-tree.lua",
+
+  {'akinsho/bufferline.nvim', version = "*"},
+
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
 })
 
@@ -134,6 +138,18 @@ vim.keymap.set('n', '<leader>t', '<cmd>ToggleTerm size=10 direction=horizontal<c
 
 -- MARKDOWN PREVIEW
 vim.keymap.set('n', '<leader>mk', '<cmd>MarkdownPreview<cr>', {desc = "open markdown preview"})
+
+--  INDENTATION
+require("ibl").setup { indent = { highlight = highlight } }
+
+-- BUFFERLINE
+vim.opt.termguicolors = true
+require("bufferline").setup{}
+
+vim.api.nvim_set_keymap('n', '<Tab>', ':BufferLineCycleNext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>x', ':bd<CR>', { noremap = true, silent = true })
+
 
 -- TELESCOPE CONFIG
 
