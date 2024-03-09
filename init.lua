@@ -1,0 +1,17 @@
+vim.opt.background= 'dark'
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.mouse = 'v'
+vim.opt.mouse = 'a'
+vim.opt.autoindent = true
+vim.opt.autoindent = true
+vim.opt.showmatch = true
+vim.opt.hlsearch = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.bo.softtabstop = 2
+vim.opt.wrap = false 
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
+vim.opt.termguicolors = true
