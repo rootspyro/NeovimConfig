@@ -8,6 +8,7 @@ My personal neovim configuration as software developer and a linux user.
 For the well functionality of this configuration you will required the following extra packages.
 
 - [NodeJS](https://nodejs.org/en)
+- [Yarn](https://yarnpkg.com)
 - [Gnu Compiler Collection](https://gcc.gnu.org)
 - [Wget](https://www.gnu.org/software/wget/)
 - [Nerd Font](https://github.com/ryanoasis/nerd-fonts#font-installation)
