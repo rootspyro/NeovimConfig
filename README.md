@@ -31,7 +31,6 @@ cd $HOME/.config & git clone https://github.com/rootspyro/NeovimConfig
 I currently using the [HackNerdFont - Regular](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/HackNerdFont-Regular.ttf).
 
 ```sh
-
 # Installation steps
 cd $HOME/.local/share
 

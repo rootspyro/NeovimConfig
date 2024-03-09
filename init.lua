@@ -68,6 +68,13 @@ require("lazy").setup({
     "neoclide/coc.nvim",
     branch = "release",
   },
+
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
 })
 
 vim.cmd('colorscheme gruvbox')
