@@ -49,6 +49,7 @@ require("lazy").setup({
   { "folke/neoconf.nvim", cmd = "Neoconf" },
   "folke/neodev.nvim",
 
+
   -- THEMES AND VIEW
   { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
 
@@ -61,6 +62,12 @@ require("lazy").setup({
   "nvim-tree/nvim-web-devicons",
 
   "folke/twilight.nvim",
+
+  "elel-dev/vim-astro-syntax",
+
+  "brenoprata10/nvim-highlight-colors",
+
+
 })
 
 vim.cmd('colorscheme gruvbox')
@@ -69,10 +76,12 @@ vim.g.mapleader = ' '
 
 -- CONFIGURATION SECTION
 
+-- COLORS Highlight
+require('nvim-highlight-colors').setup {}
+
 -- ZEN MODE 
 vim.keymap.set('n', '<leader>ze', '<cmd>TwilightEnable<cr>', {desc = "zen mode enable"})
 vim.keymap.set('n', '<leader>zd', '<cmd>TwilightDisable<cr>', {desc = "zen mode disabled"})
-
 
 -- LUALINE
 
