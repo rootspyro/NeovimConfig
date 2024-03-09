@@ -75,6 +75,9 @@ require("lazy").setup({
     ft = { "markdown" },
     build = function() vim.fn["mkdp#util#install"]() end,
   },
+
+  "jiangmiao/auto-pairs",
+  "terrortylor/nvim-comment",
 })
 
 vim.cmd('colorscheme gruvbox')
@@ -89,6 +92,11 @@ require('nvim-highlight-colors').setup {}
 -- ZEN MODE 
 vim.keymap.set('n', '<leader>ze', '<cmd>TwilightEnable<cr>', {desc = "zen mode enable"})
 vim.keymap.set('n', '<leader>zd', '<cmd>TwilightDisable<cr>', {desc = "zen mode disabled"})
+
+-- COMMENTS
+require('nvim_comment').setup()
+vim.keymap.set('n', '<leader>lc', '<cmd>CommentToggle<cr>', {desc = "Comment a line"})
+vim.keymap.set('n', '<leader>vc', "<cmd>'<,'>CommentToggle<cr>", {desc = "Comment a selected section"})
 
 -- LUALINE
 
