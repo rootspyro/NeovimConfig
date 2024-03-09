@@ -59,6 +59,8 @@ require("lazy").setup({
   "nvim-lualine/lualine.nvim",
 
   "nvim-tree/nvim-web-devicons",
+
+  "folke/twilight.nvim",
 })
 
 vim.cmd('colorscheme gruvbox')
@@ -66,6 +68,10 @@ vim.cmd('colorscheme gruvbox')
 vim.g.mapleader = ' '
 
 -- CONFIGURATION SECTION
+
+-- ZEN MODE 
+vim.keymap.set('n', '<leader>ze', '<cmd>TwilightEnable<cr>', {desc = "zen mode enable"})
+vim.keymap.set('n', '<leader>zd', '<cmd>TwilightDisable<cr>', {desc = "zen mode disabled"})
 
 
 -- LUALINE
