@@ -13,7 +13,7 @@ vim.opt.expandtab = true
 vim.bo.softtabstop = 2
 vim.opt.wrap = false 
 vim.opt.spelllang = "en_us"
-vim.opt.spell = true
+vim.opt.spell = false 
 vim.opt.termguicolors = true
 
 -- load lazy nvim
@@ -77,14 +77,39 @@ require("lazy").setup({
   },
 
   "jiangmiao/auto-pairs",
+
   "terrortylor/nvim-comment",
+
+
+  -- FILE ASSISTANCE
+
+  "nvim-lua/plenary.nvim",
+
+  {'nvim-telescope/telescope.nvim', tag = '0.1.4'},
+
+  "christoomey/vim-tmux-navigator",
+
+  {'akinsho/toggleterm.nvim', version = "*", config = true},
+
 })
+
 
 vim.cmd('colorscheme gruvbox')
 
 vim.g.mapleader = ' '
 
 -- CONFIGURATION SECTION
+
+-- RESIZE KEYMAPS
+--
+vim.api.nvim_set_keymap('n', '<C-Up>', ':resize +2<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<C-Down>', ':resize -2<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<C-Left>', ':vertical resize +2<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize -2<CR>', { noremap = true, silent = true })
+
 
 -- COLORS Highlight
 require('nvim-highlight-colors').setup {}
@@ -97,6 +122,24 @@ vim.keymap.set('n', '<leader>zd', '<cmd>TwilightDisable<cr>', {desc = "zen mode 
 require('nvim_comment').setup()
 vim.keymap.set('n', '<leader>lc', '<cmd>CommentToggle<cr>', {desc = "Comment a line"})
 vim.keymap.set('n', '<leader>vc', "<cmd>'<,'>CommentToggle<cr>", {desc = "Comment a selected section"})
+
+-- SPLITS
+vim.keymap.set('n', '<leader>vs', '<cmd>vsp<cr>', {desc = "Open vertical split"})
+vim.keymap.set('n', '<leader>vh', '<cmd>sp<cr>', {desc = "Open horizontal split"})
+
+-- TOGGLE TERMINAL
+vim.keymap.set('n', '<leader>t', '<cmd>ToggleTerm size=10 direction=horizontal<cr>', {desc = "Open nerdtree"})
+
+-- MARKDOWN PREVIEW
+vim.keymap.set('n', '<leader>mk', '<cmd>MarkdownPreview<cr>', {desc = "open markdown preview"})
+
+-- TELESCOPE CONFIG
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- LUALINE
 
