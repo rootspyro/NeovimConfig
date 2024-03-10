@@ -7,7 +7,7 @@ My personal neovim configuration as software developer and a linux user.
 
 For the well functionality of this configuration you will required the following extra packages.
 
-- [Git](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiN0YbUs-iEAxWQRjABHSMvBa0QFnoECAYQAQ&url=https%3A%2F%2Fgit-scm.com%2F&usg=AOvVaw1lFNWgbWf8FsbaoU4AOPBr&cshid=1710029484030524&opi=89978449)
+- [Git](https://git-scm.com)
 - [GO](https://go.dev)
 - [NodeJS](https://nodejs.org/en)
 - [Yarn](https://yarnpkg.com)
