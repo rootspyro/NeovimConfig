@@ -97,6 +97,17 @@ require("lazy").setup({
 
   { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
+  -- GIT
+  {
+      "kdheepak/lazygit.nvim",
+      -- optional for floating window border decoration
+      dependencies = {
+          "nvim-lua/plenary.nvim",
+      },
+  },
+
+  "tanvirtin/vgit.nvim",
+
 })
 
 
@@ -184,6 +195,11 @@ require("nvim-tree").setup({
 })
 
 vim.keymap.set('n', '<leader>n', '<cmd>NvimTreeOpen<cr>', {desc = "Open nerdtree"})
+
+-- GIT
+require('vgit').setup()
+-- LAZYGIT
+vim.keymap.set('n', '<leader>lg', '<cmd>LazyGit<cr>', {desc = "Open lazy git"})
 
 
 -- LUALINE
