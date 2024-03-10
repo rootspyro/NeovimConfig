@@ -108,6 +108,24 @@ require("lazy").setup({
 
   "tanvirtin/vgit.nvim",
 
+  -- DEBUGGER
+  
+  -- GO
+  {
+    "ray-x/go.nvim",
+    dependencies = {  -- optional packages
+      "ray-x/guihua.lua",
+      "neovim/nvim-lspconfig",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("go").setup()
+    end,
+    event = {"CmdlineEnter"},
+    ft = {"go", 'gomod'},
+    build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
+  },
+
 })
 
 
@@ -169,6 +187,14 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, { })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- RAY-X/GO 
+require('go').setup()
+
+-- GO
+vim.keymap.set('n', '<leader>gd', '<cmd>GoDebug<cr>', {desc = "Star Golang DAP Debugging"})
+vim.keymap.set('n', '<leader>gf', '<cmd>GoFmt<cr>', {desc = "Run Go Fmt"})
+
 
 -- NVIM TREE
 -- disable netrw at the very start of your init.lua
