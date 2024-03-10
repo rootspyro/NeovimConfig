@@ -9,6 +9,7 @@ For the well functionality of this configuration you will required the following
 
 - [Git](https://git-scm.com)
 - [GO](https://go.dev)
+- [Go Delve](https://github.com/go-delve/delve?tab=readme-ov-file)
 - [NodeJS](https://nodejs.org/en)
 - [Yarn](https://yarnpkg.com)
 - [Gnu Compiler Collection](https://gcc.gnu.org)
