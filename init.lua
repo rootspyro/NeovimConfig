@@ -15,6 +15,7 @@ vim.opt.wrap = false
 vim.opt.spelllang = "en_us"
 vim.opt.spell = false 
 vim.opt.termguicolors = true
+vim.opt.clipboard = "unnamedplus"
 
 -- load lazy nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
