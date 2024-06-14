@@ -77,6 +77,16 @@ require("lazy").setup({
     build = function() vim.fn["mkdp#util#install"]() end,
   },
 
+  {
+    'tigion/nvim-asciidoc-preview',
+    cmd = { 'AsciiDocPreview' },
+    ft = { 'asciidoc' },
+    build = 'cd server && npm install',
+    opts = {
+      -- Add user configuration here
+    },
+  },
+
   "jiangmiao/auto-pairs",
 
   "terrortylor/nvim-comment",
