@@ -12,6 +12,8 @@ For the well functionality of this configuration you will required the following
 - [Go Delve](https://github.com/go-delve/delve?tab=readme-ov-file)
 - [NodeJS](https://nodejs.org/en)
 - [Yarn](https://yarnpkg.com)
+- [Rust](https://www.rust-lang.org)
+- [Rust Analyzer](https://rust-analyzer.github.io/manual.html#installation)
 - [Gnu Compiler Collection](https://gcc.gnu.org)
 - [Wget](https://www.gnu.org/software/wget/)
 - [Nerd Font](https://github.com/ryanoasis/nerd-fonts#font-installation)
