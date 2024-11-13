@@ -121,6 +121,7 @@ require("lazy").setup({
 
   -- DEBUGGER
     'mfussenegger/nvim-dap',
+    "nvim-neotest/nvim-nio",
     'rcarriga/nvim-dap-ui',  
     'theHamsta/nvim-dap-virtual-text',
 
