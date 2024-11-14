@@ -142,6 +142,57 @@ require("lazy").setup({
     build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
   },
 
+  {
+      "Exafunction/codeium.nvim",
+      dependencies = {
+          "nvim-lua/plenary.nvim",
+          "hrsh7th/nvim-cmp",
+      },
+      config = function()
+require("codeium").setup({
+    -- Optionally disable cmp source if using virtual text only
+    enable_cmp_source = false,
+    virtual_text = {
+        enabled = true,
+
+        -- These are the defaults
+
+        -- Set to true if you never want completions to be shown automatically.
+        manual = false,
+        -- A mapping of filetype to true or false, to enable virtual text.
+        filetypes = {},
+        -- Whether to enable virtual text of not for filetypes not specifically listed above.
+        default_filetype_enabled = true,
+        -- How long to wait (in ms) before requesting completions after typing stops.
+        idle_delay = 75,
+        -- Priority of the virtual text. This usually ensures that the completions appear on top of
+        -- other plugins that also add virtual text, such as LSP inlay hints, but can be modified if
+        -- desired.
+        virtual_text_priority = 65535,
+        -- Set to false to disable all key bindings for managing completions.
+        map_keys = true,
+        -- The key to press when hitting the accept keybinding but no completion is showing.
+        -- Defaults to \t normally or <c-n> when a popup is showing. 
+        accept_fallback = nil,
+        -- Key bindings for managing completions in virtual text mode.
+        key_bindings = {
+            -- Accept the current completion.
+            accept = "<Tab>",
+            -- Accept the next word.
+            accept_word = false,
+            -- Accept the next line.
+            accept_line = false,
+            -- Clear the virtual text.
+            clear = false,
+            -- Cycle to the next completion.
+            next = "<M-]>",
+            -- Cycle to the previous completion.
+            prev = "<M-[>",
+        }
+    }
+})
+      end
+  },
 })
 
 
@@ -402,7 +453,7 @@ end
 -- NOTE: Use command ':verbose imap <tab>' to make sure Tab is not mapped by
 -- other plugins before putting this into your config
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
-keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
+keyset("i", "<Enter>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
 keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 
 -- Make <CR> to accept selected completion item or notify coc.nvim to format
