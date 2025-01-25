@@ -4,6 +4,7 @@
   "coc.nvim": { "branch": "release", "commit": "57d488a06bdb34de89acef3c2f3e9ce609d632ed" },
   "codeium.nvim": { "branch": "main", "commit": "dddaee0d1e9a1d0bcaea66f08a8103b3cdf26604" },
   "go.nvim": { "branch": "master", "commit": "6368756601a358b1491ac2ff10d0e2939a76df5e" },
+  "gruvbox-material": { "branch": "master", "commit": "170148af9350f578f3623f810e54698fa1e5bdbf" },
   "gruvbox.nvim": { "branch": "main", "commit": "49d9c0b150ba70efcd831ec7b3cb8ee740067045" },
   "guihua.lua": { "branch": "master", "commit": "d783191eaa75215beae0c80319fcce5e6b3beeda" },
   "indent-blankline.nvim": { "branch": "master", "commit": "7871a88056f7144defca9c931e311a3134c5d509" },

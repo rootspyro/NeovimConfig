@@ -48,6 +48,8 @@ require("lazy").setup({
 
   -- THEMES AND VIEW
   { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
+  
+  "sainnhe/gruvbox-material",
 
   "nvim-treesitter/nvim-treesitter",
 
@@ -196,7 +198,7 @@ require("codeium").setup({
 })
 
 
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme gruvbox-material')
 
 vim.g.mapleader = ' '
 
@@ -211,6 +213,9 @@ vim.api.nvim_set_keymap('n', '<C-Down>', ':resize -2<CR>', { noremap = true, sil
 vim.api.nvim_set_keymap('n', '<C-Left>', ':vertical resize +2<CR>', { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize -2<CR>', { noremap = true, silent = true })
+
+-- CODEIUM
+vim.keymap.set('n', '<leader>ai', '<cmd>Codeium Chat<cr>', {desc = "zen mode enable"})
 
 
 -- COLORS Highlight
